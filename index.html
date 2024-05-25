@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="icon.png">
-    <link rel="stylesheet" type="text/css" href="Estilos.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
     <title>BIG DATA</title>
 </head>
 <body>
@@ -78,6 +78,37 @@
         <div id="contenido">
             <h2>Relación con el Programador</h2>
             <p>Para los programadores, la Big Data ofrece la oportunidad de trabajar en proyectos que manejan datos a una escala sin precedentes, desafiando y mejorando sus habilidades en áreas como análisis de datos, machine learning y desarrollo de infraestructura de datos.</p>
+        </div>
+        <div id="contenido">
+            <h2>Grafica sobre big data</h2>
+            <h3>%De Internautas que cederian sus datos por una recompensa</h3>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <div id="piechart" style="width: 900px; height: 500px;"></div>
+   <script>
+          google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Pais', 'Personas'],
+          ['China',     36000],
+          ['Mexico',    28000],
+          ['Rusia',  20000],
+          ['Italia', 14660],
+          ['Brasil',    10720]
+          
+        ]);
+
+        var options = {
+          title: '%De Internautas que cederian sus datos por una recompensa'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+   </script>
         </div>
     </section>
 
